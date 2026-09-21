@@ -1,7 +1,4 @@
 void main() {
-    Chat Oji = new Chat("Oji");
-    System.out.println(Oji.appeler());
-
     Fer fer1 = new Fer("Alpes", 4);
 
     float tauxCarbonne = fer1.getTauxCarbonne();
@@ -30,4 +27,22 @@ void main() {
 
     forme = fer1.getForme();
     System.out.println(forme);
+
+
+    Chat Oji = new Chat("Oji");
+    Nourriture croquettes = new Nourriture("croquettes");
+    Nourriture croquettesDeMetal = new Nourriture(fer1.getType());
+
+    String etat = Oji.getEtat();
+    System.out.println(etat);
+
+    Oji.manger(croquettes);
+
+    etat = Oji.getEtat();
+    System.out.println(etat);
+
+    Oji.manger(croquettesDeMetal);
+
+    etat = Oji.getEtat();
+    System.out.println(etat);
 }

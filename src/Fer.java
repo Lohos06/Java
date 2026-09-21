@@ -34,10 +34,18 @@ public class Fer {
     }
 
     public void typeMetal() {
-        if (this.tauxCarbonne <= 1) {
-            this.type = "acier";
-        } else {
-            this.type = "fer";
+        if (this.tauxCarbonne <= 0.02) {
+            this.type = "Fer pur";
+        } else if(this.tauxCarbonne >= 0.02 && this.tauxCarbonne <= 2) {
+            this.type = "Acier";
+        } else if(this.tauxCarbonne >= 2 && this.tauxCarbonne < 6.67) {
+            this.type = "Fonte";
+        } else if(this.tauxCarbonne == 6.67) {
+            this.type = "Cementite";
+        } else if(this.tauxCarbonne > 6.67 && this.tauxCarbonne <= 99.99) {
+            this.type = "graphite";
+        } else if(this.tauxCarbonne > 99.99) {
+            this.type = "Carbone pur";
         }
     }
 
