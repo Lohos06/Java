@@ -1,14 +1,20 @@
 package metaux;
 
-public class Or {
+public class Or extends MetauxAbstractClass{
 
-    String forme;
-
-    public Or() {
-        forme = "minerai";
+    public Or(String origine) {
+        this.origine = origine;
+        this.forme = "minerai";
+        this.temperatureFonte = 1064.18F;
     }
 
-    public String getForme () {
-        return this.forme;
+    public void fonte(int temperature) {
+        if(temperature >= temperatureFonte){
+            this.forme = "liquide";
+            System.out.println("Metal Fondu");
+        }
+        else{
+            System.out.println("Augmentez la temperature");
+        }
     }
 }

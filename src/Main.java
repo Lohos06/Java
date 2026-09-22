@@ -2,12 +2,12 @@ import metaux.Fer;
 import metaux.Or;
 
 void main() {
+    Forgeron Edward = new Forgeron("Edward", 1);
+
     Fer fer = new Fer("Alpes", 4);
-    Or or = new Or();
+    Or or = new Or("Caslav");
 
-
-
-    System.out.println(fer.getForme());
-    System.out.println(or.getForme());
+    Edward.fonte(fer);
+    fer.getForme();
 
 }
