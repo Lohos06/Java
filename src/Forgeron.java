@@ -10,6 +10,15 @@ public class Forgeron {
         this.maitrise = maitrise;
     }
 
+    public String getNom() {
+        System.out.println(this.nom);
+        return this.nom;
+    }
+    public int getMaitrise() {
+        System.out.println(this.maitrise);
+        return this.maitrise;
+    }
+
     public void fonte(MetauxAbstractClass Metal) {
         if (Metal.getForme() != "liquide") {
             Metal.setForme("liquide");
