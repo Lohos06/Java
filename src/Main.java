@@ -1,5 +1,7 @@
 import metaux.Fer;
+import metaux.MetauxAbstractClass;
 import metaux.Or;
+
 import java.util.Scanner;  // Import the Scanner class
 
 void main() {
@@ -18,12 +20,23 @@ void main() {
     System.out.println("D'ou vient votre minerai ?");
     String origine = myObj.next();
 
+    MetauxAbstractClass metal = null;
 
-    if (metalChoisi == "Fer") {
+    if (Objects.equals(metalChoisi, "Fer")) {
         System.out.println("Quel est le taux de carbonne de votre Fer ?");
         float tauxCarbonne = myObj.nextFloat();
-        Fer metal = new Fer(origine, tauxCarbonne);
-    } else if (metalChoisi == "Or") {
-        Or metal = new Or(origine);
+        metal = new Fer(origine, tauxCarbonne);
+    } else if (Objects.equals(metalChoisi, "Or")) {
+        metal = new Or(origine);
+    }
+
+    while (true) {
+        System.out.println("Quel est prochaine action ?");
+        String response = myObj.next();
+
+        if (Objects.equals(response, "fondre")) {
+            forgeron.fonte(metal);
+        }
+
     }
 }

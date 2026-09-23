@@ -7,15 +7,12 @@ public class MetauxAbstractClass {
     float temperatureFonte;
 
     public String getOrigine() {
-        System.out.println(this.origine);
         return this.origine;
     }
     public String getForme() {
-        System.out.println(this.forme);
         return this.forme;
     }
     public float getTemperatureFonte() {
-        System.out.println(this.temperatureFonte);
         return this.temperatureFonte;
     }
 
